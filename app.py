@@ -149,7 +149,7 @@ if st.button("🚀 진단 결과 확인하기", use_container_width=True):
             for p in bad_points: st.markdown(f"- ❗ {p}")
 
     with col_res2:
-        st.subheader("📊 남들과 비교하기 (나의 위치)")
+        st.subheader("📊 나의 위치 분포")
         
         if not df_ref.empty:
             # 비교할 항목 선택 탭
@@ -181,3 +181,4 @@ if st.button("🚀 진단 결과 확인하기", use_container_width=True):
         
         else:
             st.info("비교할 원본 데이터(xlsx)가 없어 그래프를 표시할 수 없습니다.")
+
