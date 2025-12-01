@@ -9,7 +9,7 @@ import seaborn as sns
 # 0. 핵심 설정 (학습 코드와 동일한 함수 정의 필수!)
 # ==============================================================================
 # ★ 이 부분이 없으면 joblib.load 할 때 에러가 납니다.
-SNS_WEIGHT = 3.0
+SNS_WEIGHT = 1.5
 def apply_weight(x):
     return x * SNS_WEIGHT
 
@@ -201,5 +201,6 @@ if st.button("🚀 진단 결과 확인하기", use_container_width=True):
                 plot_ranking('sleep_hours', sleep_hours, "Sleep Hours", invert=False)
         else:
             st.warning("⚠️ 비교용 데이터(xlsx)가 없어 그래프를 그릴 수 없습니다.")
+
 
 
