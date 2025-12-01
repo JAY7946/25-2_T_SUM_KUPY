@@ -1,4 +1,3 @@
-%%writefile app.py
 import streamlit as st
 import pandas as pd
 import joblib
@@ -202,3 +201,4 @@ if st.button("🚀 진단 결과 확인하기", use_container_width=True):
                 plot_ranking('sleep_hours', sleep_hours, "Sleep Hours", invert=False)
         else:
             st.warning("⚠️ 비교용 데이터(xlsx)가 없어 그래프를 그릴 수 없습니다.")
+
