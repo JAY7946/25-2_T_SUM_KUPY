@@ -222,15 +222,16 @@ if st.button("🚀 진단 결과 확인하기", use_container_width=True):
                 st.pyplot(fig)
 
             with tab1:
-                st.info("📉 SNS 사용시간 (낮을수록 좋습니다)")
+                st.info("📉 SNS 사용시간")
                 plot_ranking('social_media_hours', social_media, "Social Media Hours", invert=True)
                 
             with tab2:
-                st.info("📈 공부 시간 (높을수록 좋습니다)")
+                st.info("📈 공부 시간")
                 plot_ranking('study_hours_per_day', study_hours, "Study Hours", invert=False)
                 
             with tab3:
-                st.info("💤 수면 시간 (적절한 유지가 중요합니다)")
+                st.info("💤 수면 시간")
                 plot_ranking('sleep_hours', sleep_hours, "Sleep Hours", invert=False)
         else:
             st.warning("⚠️ 비교용 데이터(xlsx/csv)가 없어 그래프를 그릴 수 없습니다. 폴더에 데이터 파일을 넣어주세요.")
+
