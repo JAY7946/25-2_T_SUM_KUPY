@@ -163,7 +163,7 @@ if st.button("🚀 진단 결과 확인하기", use_container_width=True):
         
         if not df_ref.empty:
             # 탭으로 구분해서 보여주기
-            tab1, tab2, tab3 = st.tabs(["SNS 시간 (핵심)", "공부 시간", "수면 시간"])
+            tab1, tab2, tab3 = st.tabs(["SNS 시간", "공부 시간", "수면 시간"])
             
             def plot_ranking(col_name, user_val, title, invert=False):
                 """히스토그램과 나의 위치를 그려주는 함수"""
@@ -190,15 +190,16 @@ if st.button("🚀 진단 결과 확인하기", use_container_width=True):
                 st.pyplot(fig)
 
             with tab1:
-                st.info("📉 SNS는 **왼쪽(시간이 적음)**에 있을수록 좋습니다.")
+                st.info("📉 SNS 사용시간")
                 plot_ranking('social_media_hours', social_media, "Social Media Hours", invert=True)
                 
             with tab2:
-                st.info("📈 공부 시간은 **오른쪽(시간이 많음)**에 있을수록 상위권입니다.")
+                st.info("📈 공부 시간")
                 plot_ranking('study_hours_per_day', study_hours, "Study Hours", invert=False)
                 
             with tab3:
                 plot_ranking('sleep_hours', sleep_hours, "Sleep Hours", invert=False)
         else:
             st.warning("⚠️ 비교용 데이터(xlsx)가 없어 그래프를 그릴 수 없습니다.")
+
 
