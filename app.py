@@ -230,15 +230,16 @@ if st.button("🚀 AI 진단 결과 확인하기", use_container_width=True):
                 st.pyplot(fig)
 
             with tab1:
-                st.info("📉 SNS 사용시간 (낮을수록 좋음)")
+                st.info("📉 SNS 사용시간")
                 plot_ranking('social_media_hours', social_media, "SNS 사용 시간 분포", invert=True)
                 
             with tab2:
-                st.info("📈 공부 시간 (높을수록 좋음)")
+                st.info("📈 공부 시간")
                 plot_ranking('study_hours_per_day', study_hours, "하루 공부 시간 분포", invert=False)
                 
             with tab3:
-                st.info("💯 시험 점수 (높을수록 좋음)")
+                st.info("💯 시험 점수")
                 plot_ranking('exam_score', exam_score, "시험 점수 분포", invert=False, unit="점")
         else:
             st.warning("⚠️ 비교용 데이터 파일(student_habits_performance.xlsx)이 없어 그래프를 그릴 수 없습니다.")
+
